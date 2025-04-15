@@ -21,4 +21,6 @@ export async function createInvoice(formData: FormData) {
   // Almacenar los valores monetarios en centavos en la base de datos para
   // eliminar errores de punto flotante de JavaScript y garantizar una mayor precisión
   const amountInCents = amount * 100;
+  // Nueva fecha para la creación de nuevas facturas
+  const date = new Date().toISOString().split("T")[0];
 }
