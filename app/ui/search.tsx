@@ -13,6 +13,8 @@ export default function Search({ placeholder }: { placeholder: string }) {
     console.log(`Searching... ${term}`);
 
     const params = new URLSearchParams(searchParams);
+    // Added in chapter 11 for set page to 1 in a new search
+    params.set("page", "1");
     if (term) {
       params.set("query", term);
     } else {
